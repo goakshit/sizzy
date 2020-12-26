@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <Header />
+  <Home />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/header/header.vue'
+import Home from './components/home/home.vue'
 
 export default {
-  name: 'App',
+  name: 'Sizzy',
   components: {
-    HelloWorld
+    Header,
+    Home
   }
 }
 </script>

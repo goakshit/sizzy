@@ -19,7 +19,7 @@
     <div class="home">
         <div class="description-container">
             <div class="header">Welcome to Sizzy.</div>
-            <div class="subheader">Solution to digital signature.</div>
+            <div class="subheader">Open Source messaging solution.</div>
         </div>
     </div>
 </template>

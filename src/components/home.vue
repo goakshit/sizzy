@@ -21,6 +21,9 @@
             <div class="header">Welcome to Sizzy.</div>
             <div class="subheader">Open Source messaging solution.</div>
         </div>
+        <div class="login-container">
+
+        </div>
     </div>
 </template>
 

@@ -8,7 +8,7 @@
         display: flex;
         justify-content: space-between;
     }
-    .about-us {
+    .header-name, .header-aboutus {
         text-decoration: none;
         color: white;
     }
@@ -16,8 +16,8 @@
 
 <template>
     <div class="header-container">
-        <div class="header-item">Sizzy</div>
-        <a class="header-item about-us" href="#">About Us</a>
+        <router-link class="header-name" to="/">Sizzy</router-link>
+        <router-link class="header-aboutus" to="/about">About Us</router-link>
     </div>
 </template>
 

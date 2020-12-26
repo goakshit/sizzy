@@ -1,17 +1,14 @@
 <template>
   <Header />
-  <Home />
+  <router-view />
 </template>
 
 <script>
-import Header from './components/header/header.vue'
-import Home from './components/home/home.vue'
-
+import Header from './components/header.vue'
 export default {
   name: 'Sizzy',
   components: {
-    Header,
-    Home
+    Header
   }
 }
 </script>

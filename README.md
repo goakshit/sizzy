@@ -1,4 +1,4 @@
-# [In Devlopment] Sizzy - Open source messaging solution
+# [In Development] Sizzy - Open source messaging solution
 
 #### Steps:
 - [x] Routing setup

@@ -1,6 +1,4 @@
-<style scoped>
-    .home {
-    }
+<style lang="less" scoped>
     .login-container {
         display: flex;
         justify-content: space-evenly;
@@ -14,39 +12,40 @@
         border-radius: 0.8rem;
         min-height: 40rem;
         text-align: center;
-    }
-    .description-container {
-        width: 30rem;
-        align-self: center;
-    }
-    .github-section {
-        width: 30rem;
-        font-size: 2.4rem;
-        align-self: center;
-    }
-    .github-section .image {
-        margin: auto;
-        height: 20%;
-        width: 20%;
-        background: rgba(0,0,0,0.1);
-        border-radius: 0.8rem;
-        cursor: pointer;
-    }
-    .github-section .header {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    .description-container .header {
-        font-size: 2.4rem;
-    }
-    .description-container .subheader {
-        font-size: 1.8rem;
+        .description-container {
+            width: 30rem;
+            align-self: center;
+            .header {
+                font-size: 2.4rem;
+            }
+            .subheader {
+                font-size: 1.8rem;
+            }
+        }
+        .github-section {
+            width: 30rem;
+            font-size: 2.4rem;
+            align-self: center;
+            .image {
+                margin: auto;
+                height: 20%;
+                width: 20%;
+                background: rgba(0,0,0,0.1);
+                border-radius: 0.8rem;
+                cursor: pointer;
+            }
+            .header {
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+        }
     }
 </style>
 
 <template>
     <div class="home">
-        <div class="login-container">
+        <div v-if="user">Logged In</div>
+        <div class="login-container" v-else>
             <div class="description-container">
                 <div class="header">Welcome to Sizzy.</div>
                 <div class="subheader">Open Source messaging solution.</div>
@@ -61,6 +60,10 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            user: null
+        }
+    },
 }
 </script>

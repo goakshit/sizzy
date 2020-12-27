@@ -1,4 +1,4 @@
-<style scoped>
+<style lang="less" scoped>
     .header-container {
         padding: 0.8rem 1.6rem;
         color: white;
@@ -7,17 +7,17 @@
         background: #2c3e50;
         display: flex;
         justify-content: space-between;
-    }
-    .header-name, .header-aboutus {
-        text-decoration: none;
-        color: white;
+        .name, .aboutus {
+            text-decoration: none;
+            color: white;
+        }
     }
 </style>
 
 <template>
     <div class="header-container">
-        <router-link class="header-name" to="/">Sizzy</router-link>
-        <router-link class="header-aboutus" to="/about">About Us</router-link>
+        <router-link class="name" to="/">Sizzy</router-link>
+        <router-link class="aboutus" to="/about">About Us</router-link>
     </div>
 </template>
 

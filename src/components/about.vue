@@ -1,28 +1,28 @@
-<style scoped>
+<style lang="less" scoped>
     .aboutus-wrapper {
         text-align: center;
         font-size: 2.4rem;
         margin: auto;
-    }
-    .header-image {
-        background: url("../assets/images/about-bg.jpg");
-        width: 100%;
-        height: 350px;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-    }
-    .image-text {
-        align-self: center;
-        margin: auto;
-        font-size: 3.6rem;
-        font-weight: 550;
-    }
-    .content {
-        width: 50%;
-        margin: auto;
-        padding-top: 2.4rem;
-        padding-bottom: 2.4rem;
+        .header-image {
+            background: url("../assets/images/about-bg.jpg");
+            width: 100%;
+            height: 350px;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            .image-text {
+                align-self: center;
+                margin: auto;
+                font-size: 3.6rem;
+                font-weight: 550;
+            }
+        }
+        .content {
+            width: 50%;
+            margin: auto;
+            padding-top: 2.4rem;
+            padding-bottom: 2.4rem;
+        }
     }
 </style>
 

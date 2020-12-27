@@ -2,8 +2,9 @@
 
 #### Steps:
 - [x] Routing setup
-- [ ] Env/Config setup
-- [ ] Veux for state management
+- [x] Veux for state management
+- [x] Env/Config setup using Veux
+- [x] Firebase initial setup
 - [ ] API for signup/login flow using firebase
 - [ ] (Optional) OAuth2 implementation using github oauth
 - [ ] Integration of sockets.io with golang backend

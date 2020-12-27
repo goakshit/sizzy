@@ -44,7 +44,7 @@
 
 <template>
     <div class="home">
-        <div v-if="user">Logged In</div>
+        <div v-if="isUserLoggedIn">Logged In</div>
         <div class="login-container" v-else>
             <div class="description-container">
                 <div class="header">Welcome to Sizzy.</div>
@@ -59,11 +59,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex"
 export default {
-    data() {
-        return {
-            user: null
-        }
-    },
+    computed: mapGetters(["isUserLoggedIn"])
 }
 </script>

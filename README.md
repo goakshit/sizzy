@@ -2,5 +2,8 @@
 
 #### Steps:
 - [x] Routing setup
-- [ ] OAuth2 implementation using github(Using pizzly)
+- [ ] Env/Config setup
+- [ ] Veux for state management
+- [ ] API for signup/login flow using firebase
+- [ ] (Optional) OAuth2 implementation using github oauth
 - [ ] Integration of sockets.io with golang backend

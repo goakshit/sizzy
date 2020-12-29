@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import { auth } from '../firebase'
-// import store from "../store/store"
+import store from "../store/store"
 import Login from '../components/login.vue'
 import About from '../components/about.vue'
 import Home from '../components/home.vue'
@@ -41,12 +41,14 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
 
   // const isLoggedIn = store.getters.isUserLoggedIn
-  if (to.name == 'Home' && to.meta.isProtected && auth.currentUser) {
-    next({ path: '/' })
-  }
-  else if (to.meta.isProtected && !auth.currentUser) {
+  if (to.meta.isProtected && !auth.currentUser) {
     next({
       path: '/login',
+      query: { redirect: to.fullPath }
+    })
+  } else if(to.name == 'Login' && auth.currentUser) {
+    next({
+      path: '/',
       query: { redirect: to.fullPath }
     })
   }

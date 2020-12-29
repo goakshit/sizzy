@@ -64,17 +64,26 @@ import firebase from 'firebase/app';
 export default {
     methods: {
         signInWithGithub() {
+            const vm = this
             var provider = new firebase.auth.GithubAuthProvider();
             provider.setCustomParameters({
                 'allow_signup': 'false',
             });
             firebase.auth().signInWithPopup(provider).then(function(result) {
-                console.log("Signed in", result)
-                // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-                var token = result.credential.accessToken;
-                // The signed-in user info.
-                var user = result.user;
                 
+                console.log("Signed in", result)
+                vm.githubToken = result.credential.accessToken;
+                firebase.auth().currentUser.getIdToken(true).then(function(idToken) {
+                    vm.accessToken = idToken
+                }).catch(function(error) {
+                    // Handle error
+                });
+
+                vm.$store.commit('setFirebaseUser', {
+                    "user": result.user,
+                    "accessToken": vm.accessToken,
+                })
+
                 // Mutate and set user data
                 // Check for additional info in result
                 // If newUser is 'true', make api call to create
